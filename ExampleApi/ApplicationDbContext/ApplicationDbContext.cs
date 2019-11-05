@@ -9,6 +9,13 @@ namespace ExampleApi.ApplicationDbContext
 {
     public class ApplicationDbContext :DbContext
     {
+        //llaves compuesta
+        //aqui usamos el api fluente que es para decir que tenemos una primary key and foreang key in the same table
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<TeacherStudent>().HasKey(x => new { x.TeacherOfStudentId, x.StudentId });
+        }
         public DbSet<Student> Students { get; set; }
         public DbSet<AddressStudent> Address { get; set; }
         public DbSet<InstitutionStudent> Institutions { get; set; }

@@ -23,5 +23,7 @@ namespace ExampleApi.Models
         //relaccion de uno a uno
         public AddressStudent AddressStudent { get; set; }
         public int InstitutionStudentId { get; set; }
+        //this is for the relationship 
+        public List<TeacherStudent> TeacherStudents { get; set; }
     }
 }
