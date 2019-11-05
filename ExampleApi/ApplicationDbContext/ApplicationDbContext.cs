@@ -9,7 +9,9 @@ namespace ExampleApi.ApplicationDbContext
 {
     public class ApplicationDbContext :DbContext
     {
-        public DbSet<Estudent> Students { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<AddressStudent> Address { get; set; }
+        public DbSet<InstitutionStudent> Institutions { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options)
         {
 

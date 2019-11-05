@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ExampleApi.Models
 {
-    public class Estudent : IEntity
+    public class Student:IEntity
     {
-        public int Id { get ; set ; }
+        public int Id { get; set; }
         [Required]
-        [StringLength(30,MinimumLength =4)]
+        [StringLength(30, MinimumLength = 4)]
         public string Name { get; set; }
         [Required]
         [StringLength(30, MinimumLength = 4)]
@@ -22,11 +22,6 @@ namespace ExampleApi.Models
         public string Tell { get; set; }
         //relaccion de uno a uno
         public AddressStudent AddressStudent { get; set; }
-    }
-    public class AddressStudent
-    {
-        public string Street { get; set; }
-        public string NumHome { get; set; }
-        public int StudentId { get; set; }
+        public int InstitutionStudentId { get; set; }
     }
 }
