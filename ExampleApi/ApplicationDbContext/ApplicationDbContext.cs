@@ -12,6 +12,8 @@ namespace ExampleApi.ApplicationDbContext
         public DbSet<Student> Students { get; set; }
         public DbSet<AddressStudent> Address { get; set; }
         public DbSet<InstitutionStudent> Institutions { get; set; }
+        public DbSet<TeacherOfStudent> Teachers { get; set; }
+        public DbSet<TeacherStudent> TeacherStudents { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options)
         {
 
